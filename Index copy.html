@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi tienda</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header class="header-mobile">
+                3 Cuotas sin Intereses - Envio Gratis
+    </header>
+
+    <nav>
+        <div class="logo">
+            <img src="Logo.jpg" alt="Logo de la marca">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="menu">
+            <li><a href="index.html">Tienda</a></li>
+            <li class="active"><a href="Productos.html">Productos</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Inicio.html">Inicio</a></li>
+
+        </ul>
+    </nav>
+
+<body>
+    
+    <h1>Carro de Compras</h1>
+    <div class="producto">
+        <h2>Producto 1</h2>
+        <p>Precio: $50.00</p>
+        <button onclick="agregarAlCarro('Producto 1', 50.00)">Agregar al Carro</button>
+    </div>
+    <div class="producto">
+        <h2>Producto 2</h2>
+        <p>Precio: $60.00</p>
+        <button onclick="agregarAlCarro('Producto 2', 60.00)">Agregar al Carro</button>
+    </div>
+
+    <h2>Carro de Compras</h2>
+    <ul id="carro">
+    </ul>
+    <p>Total: $<span id="total">0.00</span></p>
+
+
+    <div class="BarraSuperior">
+        <div class="PrimeraFila">
+            <div class="redes">
+                <iconify-icon class="icono" icon="ri:facebook-fill" style="color: black;" width="22"></iconify-icon>
+                <iconify-icon class="icono" icon="uim:twitter" style="color: black;" width="22"></iconify-icon>
+                <iconify-icon class="icono" icon="bxl:instagram" style="color: black;" width="22"></iconify-icon>
+                <iconify-icon class="icono" icon="uit:youtube" style="color: black;" width="22"></iconify-icon>
+                <iconify-icon icon="uim:whatsapp" style="color: black;" width="22" class="icono"></iconify-icon>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <p></p>
+        <p> Correo: ds@gmail.com | Teléfono: 123456789 </p>
+        <p></p>
+        <p> Buenos Aires</p>
+        <p> Argentina</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

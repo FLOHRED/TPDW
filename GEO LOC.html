@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de Geolocalización</title>
+</head>
+<body>
+    <h1>Consulta de Geolocalización</h1>
+    
+    <div id="resultado">
+        <!-- Aquí se mostrará la información de geolocalización -->
+    </div>
+
+    <script>
+        // Realizar una solicitud GET a la API de ipinfo.io
+        fetch('https://ipinfo.io?token=TU_TOKEN', {
+            method: 'GET',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo obtener la información de geolocalización.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Manejar los datos de geolocalización recibidos de la API
+            const resultadoContainer = document.getElementById('resultado');
+            resultadoContainer.innerHTML = `
+                <p>Ubicación: ${data.city}, ${data.region}, ${data.country}</p>
+                <p>IP: ${data.ip}</p>
+                <p>Proveedor de Internet: ${data.org}</p>
+                <p>Coordenadas Geográficas: ${data.loc}</p>
+            `;
+        })
+        .catch(error => {
+            console.error('Error: ' + error.message);
+        });
+    </script>
+</body>
+</html>
